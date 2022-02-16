@@ -7,6 +7,26 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## 
-
 Тестовое задание PHP 
+=============
+
+###Задание 1
+- см. route: "/table-test-task"
+
+###Задание 2 SQL
+~~~sql
+SELECT a.*
+FROM users a
+JOIN (SELECT login, COUNT(*)
+FROM users 
+GROUP BY login
+HAVING count(*) > 1 ) b
+ON a.login = b.login
+ORDER BY a.login;
+~~~~
+
+###Задание 3 PHP
+- см. route: "/test-file-read"
+
+###Задание 4 PHP
+- см. route: "/presidents-test-task"

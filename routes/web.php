@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\FileReadController;
+use App\Http\Controllers\TableTaskController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/presidents-test-task', [TaskController::class, 'testTask']);
+Route::get('/test-file-read', [FileReadController::class, 'testTask']);
+Route::get('/table-test-task', [TableTaskController::class, 'testTask']);
